@@ -8,8 +8,9 @@ import React from 'react';
 import styled from 'styled-components';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
-import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import { MenuItem } from 'material-ui/Menu';
 import MenuIcon from 'material-ui-icons/Menu';
+import IconButton from 'material-ui/IconButton';
 import { browserHistory } from 'react-router';
 import { Image } from 'cloudinary-react';
 
@@ -50,9 +51,51 @@ const items = [
 ];
 
 class Nav extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+    this.handleToggle = this.handleToggle.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleToggle() {
+    this.setState({ open: !this.state.open });
+  }
+
+  handleClose(url) {
+    this.setState({ open: false });
+    browserHistory.push(url);
+  }
+
   render() {
+    const brand = <A href="/" style={{ textDecoration: 'none' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '50px', height: '50px' }} />Silicon Beach Guitar Lessons</A>;
+
     return (
       <div>
+        <div style={{ position: 'fixed', width: '100%', zIndex: '100', top: '0' }}>
+          <StyledAppBar
+            title={brand}
+            titleStyle={{ textDecoration: 'none' }}
+            iconStyleLeft={{ color: '#F5F5F5', padding: '1.3%' }}
+            onLeftIconButtonTouchTap={this.handleToggle}
+            style={{ backgroundColor: '#000000' }}
+          />
+          <div style={{ height: '5px', backgroundColor: '#24A5DA' }}></div>
+          <Drawer
+            docked={false}
+            width={200}
+            open={this.state.open}
+            onRequestChange={(open) => this.setState({ open })}
+          >
+            {items.map((item, idx) => {
+              return (
+                <MenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)}>{item.name}</MenuItem>
+              );
+            })}
+          </Drawer>
+        </div>
       </div>
     );
   }
