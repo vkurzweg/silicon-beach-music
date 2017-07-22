@@ -34,6 +34,42 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
+      path: '/rates',
+      name: 'ratesPage',
+      getComponent(location, cb) {
+        import('containers/RatesPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/about',
+      name: 'aboutPage',
+      getComponent(location, cb) {
+        import('containers/AboutPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/contact',
+      name: 'contactPage',
+      getComponent(nextState, cb) {
+        const importModules = Promise.all([
+          import('containers/ContactPage/reducer'),
+          import('containers/ContactPage/sagas'),
+          import('containers/ContactPage'),
+        ]);
+
+        const renderRoute = loadModule(cb);
+
+        importModules.then(([reducer, sagas, component]) => {
+          injectReducer('contactPage', reducer.default);
+          injectSagas(sagas.default);
+          renderRoute(component);
+        });
+
+        importModules.catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
