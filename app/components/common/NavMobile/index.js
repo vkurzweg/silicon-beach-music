@@ -22,7 +22,7 @@ const StyledAppBar = styled(AppBar)`
 const A = styled.a`
   font-family: 'Poiret One';
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 12px;
   letter-spacing: 2px;
   margin-top: 1%;
   padding-top: 1%;
@@ -77,7 +77,7 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
   }
 
   render() {
-    const brand = <A href="/" style={{ textDecoration: 'none' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '50px', height: '50px' }} />Silicon Beach Guitar Lessons</A>;
+    const brand = <A href="/" style={{ textDecoration: 'none' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '35px', height: '35px', marginTop: '-4%' }} />Silicon Beach Guitar Lessons</A>;
 
     return (
       <div>
