@@ -29,6 +29,7 @@ const Btn1 = styled.button`
   color: #24A5DA;
   border: 3px solid #24A5DA;
   outline: 0;
+  white-space: normal;
 
   &:hover, &:focus, &:active:hover, &:active:focus, &:active:visited {
     background-color: #24A5DA;
@@ -51,6 +52,7 @@ const Btn2 = styled.button`
   color: #FF5349;
   border: 3px solid #FF5349;
   outline: 0;
+  white-space: normal;
 
   &:hover, &:focus, &:active:hover, &:active:focus, &:active:visited {
     background-color: #FF5349;
@@ -73,12 +75,35 @@ const Btn3 = styled.button`
   color: #FC527F;
   border: 3px solid #FC527F;
   outline: 0;
+  white-space: normal;
 
   &:hover, &:focus, &:active:hover, &:active:focus, &:active:visited {
     background-color: #FC527F;
     border: none;
     outline: 0;
     color: black;
+  }
+`;
+
+const CtaBtn = styled.button`
+  border: 2px solid #FC527F;
+  color: #FC527F;
+  background-color: #000000;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 3em;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 66%;
+  border-radius: 2px;
+  margin: 5% auto;
+  &:hover, &:focus, &:active:hover, &:active:focus, &:active:visited {
+    background-color: #000000 !important;
+    border: 3px solid #FF5349 !important;
+    color: #FF5349;
+    font-weight: bold;
   }
 `;
 
@@ -106,7 +131,7 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
     (currentTab === 2) ? display2 = 'block' : display2;
     (currentTab === 3) ? display3 = 'block' : display3;
     return (
-      <div style={{ backgroundColor: '#000000', color: '#F5F5F5' }}>
+      <div style={{ backgroundColor: '#000000', color: '#F5F5F5', fontFamily: 'Josefin Sans' }}>
         <BtnGroup className="btn-group btn-group-lg">
           <Btn1 className="btn btn-default" onClick={this.selectTab.bind(this, 1)}>Guitar + Ukelele</Btn1>
           <Btn2 className="btn btn-default" onClick={this.selectTab.bind(this, 2)}>Music Production</Btn2>
@@ -115,30 +140,30 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
         <div className="container">
           <div className="row" style={{ display: display1 }}>
             <div className="col-sm-6">
-              <img className="img-responsive" style={{ height: '300px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1499800683/guitar_stock2.jpg" alt="guitars" />
+              <img className="img-responsive" style={{ height: '300px', paddingBottom: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1499800683/guitar_stock2.jpg" alt="guitars" />
             </div>
             <div className="col-sm-6">
-              <p>Guitar and ukulele lessons are designed to get new students playing immediately.  Whether beginning, intermediate or advanced, the curriculum seamlessly emphasizes practical playing and performance with and academic background so that knowledge of your instrument builds on knowledge of general music theory. </p>
+              <p style={{ fontFamily: 'Josefin Sans', fontSize: '18px', lineHeight: '2em', padding: '2%' }}>Guitar and ukulele lessons are designed to get new students playing immediately.  Whether beginning, intermediate or advanced, the curriculum seamlessly emphasizes practical playing and performance with and academic background so that knowledge of your instrument builds on knowledge of general music theory. </p>
             </div>
-            <button className="btn btn-default">Book a Lesson</button>
+            <CtaBtn className="btn btn-default">Book a Lesson</CtaBtn>
           </div>
           <div className="row" style={{ display: display2 }}>
             <div className="col-sm-6">
-              <img className="img-responsive" style={{ height: '300px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1498265611/production.jpg" alt="studio" />
+              <img className="img-responsive" style={{ height: '300px', paddingBottom: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1498265611/production.jpg" alt="studio" />
             </div>
             <div className="col-sm-6">
-              <p>Music production lessons are heavily geared toward teaching industry standard methods of audio engineering, recording, mixing and production while simultaneously giving students strong foundational knowledge in music theory and ear training.  Topics such as acoustics and sound reinforcement, audio engineering for media and technology and recording practices are covered as well.</p>
+              <p style={{ fontFamily: 'Josefin Sans', fontSize: '18px', lineHeight: '2em', padding: '2%' }}>Music production lessons are heavily geared toward teaching industry standard methods of audio engineering, recording, mixing and production while simultaneously giving students strong foundational knowledge in music theory and ear training.  Topics such as acoustics and sound reinforcement, audio engineering for media and technology and recording practices are covered as well.</p>
             </div>
-            <button className="btn btn-default">Book a Lesson</button>
+            <CtaBtn className="btn btn-default">Book a Lesson</CtaBtn>
           </div>
           <div className="row" style={{ display: display3 }}>
             <div className="col-sm-6">
-              <img className="img-responsive" style={{ height: '300px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1498265612/sheetmusic.jpg" alt="sheetmusic" />
+              <img className="img-responsive" style={{ height: '300px', paddingBottom: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1498265612/sheetmusic.jpg" alt="sheetmusic" />
             </div>
             <div className="col-sm-6">
-              <p>Composition lessons also incorporate a curriculum of practical application along with an academic foundation.  Score writing, MIDI programming and general music production skills are all integrated into the same curriculum so that all students will have the skills necessary to fully realize compositions.  </p>
+              <p style={{ fontFamily: 'Josefin Sans', fontSize: '18px', lineHeight: '2em', padding: '2%' }}>Composition lessons also incorporate a curriculum of practical application along with an academic foundation.  Score writing, MIDI programming and general music production skills are all integrated into the same curriculum so that all students will have the skills necessary to fully realize compositions.  </p>
             </div>
-            <button className="btn btn-default">Book a Lesson</button>
+            <CtaBtn className="btn btn-default">Book a Lesson</CtaBtn>
           </div>
         </div>
       </div>
