@@ -35,6 +35,7 @@ import LanguageProvider from 'containers/LanguageProvider';
 import '!file-loader?name=[name].[ext]!./favicon.ico';
 import '!file-loader?name=[name].[ext]!./manifest.json';
 import 'file-loader?name=[name].[ext]!./.htaccess';
+import '!!style-loader!css-loader!../node_modules/bootstrap/dist/css/bootstrap.css';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './store';
