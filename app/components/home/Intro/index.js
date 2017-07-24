@@ -7,12 +7,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const StyledHeader = styled.h1`
+  color: #F5F5F5;
+  font-family: 'Monoton';
+  text-align: center;
+  font-size: 72px;
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 3%;
+`;
+
 const BtnGroup = styled.div`
   width: 90%;
   text-align: center;
   display: block;
   margin: 0 auto;
-  padding-top: 3%;
+  padding-top: 1%;
   cursor: pointer;
 `;
 
@@ -132,6 +142,9 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
     (currentTab === 3) ? display3 = 'block' : display3;
     return (
       <div style={{ backgroundColor: '#000000', color: '#F5F5F5', fontFamily: 'Josefin Sans' }}>
+        <StyledHeader>
+          Learn to Play in L.A.
+        </StyledHeader>
         <BtnGroup className="btn-group btn-group-lg">
           <Btn1 className="btn btn-default" onClick={this.selectTab.bind(this, 1)}>Guitar + Ukelele</Btn1>
           <Btn2 className="btn btn-default" onClick={this.selectTab.bind(this, 2)}>Music Production</Btn2>

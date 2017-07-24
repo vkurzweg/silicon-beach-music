@@ -29,10 +29,7 @@ const StyledBtn1 = styled.button`
 function Hero() {
   return (
     <div>
-      <div style={{ backgroundImage: 'url(http://res.cloudinary.com/kurzweg/image/upload/v1499375519/mixer.jpg)', height: '450px', backgroundSize: 'cover' }}>
-        <StyledHeader>
-          Learn to Play in L.A.
-        </StyledHeader>
+      <div style={{ backgroundImage: 'url(http://res.cloudinary.com/kurzweg/image/upload/v1499375519/mixer.jpg)', height: '350px', backgroundSize: 'cover' }}>
       </div>
     </div>
   );
@@ -43,6 +40,11 @@ Hero.propTypes = {
 };
 
 export default Hero;
+
+// <StyledHeader>
+//   Learn to Play in L.A.
+// </StyledHeader>
+
 
 // <span style={{ color: '#FF5349' }}>L</span>ea<span style={{ color: '#FC527F' }}>r</span>n t<span style={{ color: '#24A5DA' }}>o</span> Pl<span style={{ color: '#FF5349' }}>a</span>y i<span style={{ color: '#FC527F' }}>n</span> L.A.</span>
 
