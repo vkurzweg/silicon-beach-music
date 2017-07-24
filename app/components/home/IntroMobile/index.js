@@ -11,7 +11,7 @@ const StyledHeader = styled.h1`
   color: #F5F5F5;
   font-family: 'Monoton';
   text-align: center;
-  font-size: 54px;
+  font-size: 50px;
   font-weight: normal;
   margin-top: 0;
   padding-top: 3%;
@@ -93,9 +93,8 @@ const Btn3 = styled.button`
 `;
 
 const CtaBtn = styled.button`
-  border: 2px solid #16FF97;
-  color: #16FF97;
-  background-color: #000000;
+  border: none;
+  background-color: #16FF97;
   font-family: 'Josefin Sans';
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -106,6 +105,7 @@ const CtaBtn = styled.button`
   width: 66%;
   border-radius: 2px;
   margin: 5% auto;
+  font-weight: bold;
   &:hover, &:focus, &:active:hover, &:active:focus, &:active:visited {
     background-color: #16FF97;
     border: none;
@@ -143,7 +143,7 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
         </StyledHeader>
         <div className="container" style={{ padding: '1%' }}>
           <Btn1 className="btn btn-default" onClick={this.selectTab.bind(this, 1)}>Guitar + Ukelele</Btn1>
-          <div className="row" style={{ display: display1 }}>
+          <div className="row" style={{ display: display1, padding: '3%', margin: '0 auto' }}>
             <div className="col-sm-6">
               <img className="img-responsive" style={{ height: '300px', paddingBottom: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1499800683/guitar_stock2.jpg" alt="guitars" />
             </div>
@@ -153,7 +153,7 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
             <CtaBtn className="btn btn-default">Book a Lesson</CtaBtn>
           </div>
           <Btn2 className="btn btn-default" onClick={this.selectTab.bind(this, 2)}>Music Production</Btn2>
-          <div className="row" style={{ display: display2 }}>
+          <div className="row" style={{ display: display2, padding: '3%', margin: '0 auto' }}>
             <div className="col-sm-6">
               <img className="img-responsive" style={{ height: '300px', paddingBottom: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1498265611/production.jpg" alt="studio" />
             </div>
@@ -163,7 +163,7 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
             <CtaBtn className="btn btn-default">Book a Lesson</CtaBtn>
           </div>
           <Btn3 className="btn btn-default" onClick={this.selectTab.bind(this, 3)}>Theory + Composition</Btn3>
-          <div className="row" style={{ display: display3 }}>
+          <div className="row" style={{ display: display3, padding: '3%', margin: '0 auto' }}>
             <div className="col-sm-6">
               <img className="img-responsive" style={{ height: '300px', paddingBottom: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1498265612/sheetmusic.jpg" alt="sheetmusic" />
             </div>

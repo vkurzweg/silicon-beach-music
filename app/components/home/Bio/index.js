@@ -33,7 +33,7 @@ function Bio() {
           <Image src="http://res.cloudinary.com/kurzweg/image/upload/v1498093819/ali1.jpg" alt="Ali Memarian" />
         </div>
         <div className="col-sm-6">
-          <p style={{ paddingTop: '10%', fontSize: '16px', lineHeight: '2em' }}>With over twenty years of experience playing guitar, a decade of songwriting and producing songs for feature films and composing for internationally syndicated television and advertisement, Ali Memarian's extensive list of credits is only matched by his passion for imparting the enthusiasm for music he still feels every time he picks up a guitar or heads into the studio.</p>
+          <p style={{ paddingTop: '10%', padding: '5%', fontSize: '16px', lineHeight: '2em' }}>With over twenty years of experience playing guitar, a decade of songwriting and producing songs for feature films and composing for internationally syndicated television and advertisement, Ali Memarian's extensive list of credits is only matched by his passion for imparting the enthusiasm for music he still feels every time he picks up a guitar or heads into the studio.</p>
         </div>
       </div>
     </Background>
