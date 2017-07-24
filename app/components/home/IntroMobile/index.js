@@ -77,7 +77,7 @@ const Btn3 = styled.button`
   width: 85%;
   margin: 0 auto;
   font-size: 20px !important;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
   background-color: transparent;
   color: #FC527F;
   border: 3px solid #FC527F;

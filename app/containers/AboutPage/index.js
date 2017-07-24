@@ -13,9 +13,9 @@ export class AboutPage extends React.Component { // eslint-disable-line react/pr
     return (
       <div>
         <Helmet
-          title="AboutPage"
+          title="Silicon Beach Guitar Lessons - About Ali Memarian"
           meta={[
-            { name: 'description', content: 'Description of AboutPage' },
+            { name: 'description', content: 'Ali has composed for Emmy Award-winning series over the last decade and is currently a Ph.D. candidate in Musicology.' },
           ]}
         />
       </div>
