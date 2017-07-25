@@ -12,15 +12,62 @@ const Background = styled.div`
   font-size: 16px;
   width: 85%;
   margin: 0 auto;
-  margin-top: 3%;
-  line-height: 1.5em;
+  line-height: 2em;
   padding: 2%;
+`;
+
+const Table = styled.table`
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  font-size: 18px;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+`;
+
+const Button = styled.button`
+  border: none;
+  background-color: #FC527F;
+  font-family: 'Josefin Sans';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  height: 3em;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  width: 13em;
+  border-radius: 2px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 `;
 
 function AboutContent() {
   return (
     <Background>
-      <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Ali A. Memarian has composed for Emmy Award winning series such as <em>Project Runway</em>, <em>Top Chef</em>, HBO's <em>Project Greenlight</em>, TLC's <em>Who Do You Think You Are?</em> and Bravo's <em>The Real Housewives</em> franchise for the past decade.  He graduated from Berklee College of Music as a guitar principal with a B.M. in composition in 2006, and is currently a PhD candidate in Musicology at Claremont Graduate University.<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  With over twenty years of playing guitar, a decade of songwriting and producing songs for feature films and composing for internationally syndicated television and advertisement, Ali’s extensive list of credits is only matched by his passion for imparting the enthusiasm for music he still feels every time he picks up a guitar or heads into the studio. </p>
+      <div className="row">
+        <div className="col-sm-6">
+          <Table className="table" >
+            <tbody>
+              <tr>
+                <td>Group Lessons</td>
+                <td>$69</td>
+              </tr>
+              <tr>
+                <td>Private Lessons</td>
+                <td>$99</td>
+              </tr>
+              <tr>
+                <td>Travel Charge</td>
+                <td>$10</td>
+              </tr>
+            </tbody>
+          </Table>
+          <Button className="btn btn-default">Book a Lesson</Button>
+        </div>
+        <div className="col-sm-6">
+          <p className="rates-text">All Silicon Beach Music instructors are music industry professionals and the philosophy of our curriculum is based around practical application seamlessly integrated with a solid music theory foundation.  We believe that nothing should be learned to be played without first being understood, and make sure that you are playing from day one.</p>
+        </div>
+      </div>
     </Background>
   );
 }
