@@ -3,23 +3,14 @@ import { createSelector } from 'reselect';
 /**
  * Direct selector to the contactPage state domain
  */
-const selectContactPageDomain = () => (state) => state.get('contactPage');
+const selectContact = (state) => state.get('contact');
+const selectForm = (state) => state.get('form');
 
 /**
  * Other specific selectors
  */
 
-
-/**
- * Default selector used by ContactPage
- */
-
-const makeSelectContactPage = () => createSelector(
-  selectContactPageDomain(),
-  (substate) => substate.toJS()
-);
-
-export default makeSelectContactPage;
 export {
-  selectContactPageDomain,
+  selectContact,
+  selectForm,
 };

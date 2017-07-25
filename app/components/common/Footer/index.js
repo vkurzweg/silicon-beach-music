@@ -14,6 +14,7 @@ const Background = styled.div`
   text-align: center;
   letter-spacing: 1.5px;
   bottom: 0;
+  padding: 1%;
 `;
 
 const Stripe = styled.div`
@@ -39,7 +40,6 @@ const Link = styled.a`
 function Footer() {
   return (
     <Background>
-      <Stripe />
       <p style={{ marginBottom: '0' }}>Copyright SBGL 2017 &nbsp;<img style={{ width: '40px', height: '40px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1497936951/guitartree_blue.png" alt="silicon beach guitar lessons logo" />&nbsp; Website by <Link href="http://www.v-k.la/" target="blank">VK/LA</Link></p>
     </Background>
   );
