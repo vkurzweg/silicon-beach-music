@@ -175,6 +175,7 @@
       "ip",
       "minimist",
       "sanitize.css",
+      "sendmail",
       "sitemap"
     ],
     "include": [
