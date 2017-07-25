@@ -12,7 +12,8 @@ const Background = styled.div`
   font-size: 16px;
   width: 85%;
   margin: 0 auto;
-  line-height: 2em;
+  margin-top: 3%;
+  line-height: 1.5em;
   padding: 2%;
 `;
 

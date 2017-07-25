@@ -23,9 +23,8 @@ const A = styled.a`
   font-family: 'Poiret One';
   text-transform: uppercase;
   font-size: 18px;
+  vertical-align: sub;
   letter-spacing: 2px;
-  margin-top: 1%;
-  padding-top: 1%;
   color: #F5F5F5 !important;
   font-weight: bold;
 
