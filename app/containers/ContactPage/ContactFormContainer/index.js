@@ -8,11 +8,26 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form/immutable';
 import { TextField } from 'redux-form-material-ui';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  display: block;
+  width: 15em;
+  margin: 0 auto;
+  background-color: #FC527F;
+  color: black;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  height: 3em;
+  font-size: 20px;
+  margin-bottom: 5%;
+`;
 
 export class ContactFormContainer extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div className="container" style={{ paddingTop: '10%', width: '75%', margin: '0 auto', textAlign: 'center' }}>
+      <div className="container" style={{ paddingTop: '2%', width: '75%', margin: '0 auto', textAlign: 'center', fontFamily: 'Josefin Sans', paddingRight: '0', paddingLeft: '0' }}>
         <form onSubmit={this.props.handleSubmit}>
           <div className="row">
               <div className="col-sm-4 form-group fields">
@@ -34,7 +49,7 @@ export class ContactFormContainer extends React.Component { // eslint-disable-li
                 <Field name="contactMessage" component={TextField} fullWidth />
               </div>
             </div>
-          <button id="contactBtn" type="submit" class="btn btn-primary form-btn">Send Message</button>
+          <Button id="contactBtn" type="submit" className="btn btn-primary form-btn">Send Message</Button>
         </form>
       </div>
     );

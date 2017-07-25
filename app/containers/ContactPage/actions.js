@@ -31,7 +31,6 @@ export function createMessageFailure() {
   return {
     type: CREATE_MESSAGE_FAILURE,
     payload: false,
-    isCreateFailed: true,
   };
 }
 

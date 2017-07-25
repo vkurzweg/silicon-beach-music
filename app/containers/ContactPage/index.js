@@ -12,6 +12,8 @@ import NavMobile from 'components/common/NavMobile';
 import Footer from 'components/common/Footer';
 import ContactFormContainer from './ContactFormContainer';
 import SuccessModal from 'components/contact/SuccessModal';
+import ContactHeader from 'components/contact/ContactHeader';
+import ContactHeaderMobile from 'components/contact/ContactHeaderMobile';
 import MediaQuery from 'react-responsive';
 import { selectContact, selectForm } from './selectors';
 import { createMessage, openModal, closeModal } from './actions';
@@ -40,9 +42,11 @@ export class ContactPage extends React.Component { // eslint-disable-line react/
         />
         <MediaQuery minWidth={768}>
           <Nav />
+          <ContactHeader />
         </MediaQuery>
         <MediaQuery maxWidth={767}>
           <NavMobile />
+          <ContactHeaderMobile />
         </MediaQuery>
         <ContactFormContainer
           handleSubmit={this.handleSubmit}
@@ -60,11 +64,6 @@ export class ContactPage extends React.Component { // eslint-disable-line react/
     );
   }
 }
-
-ContactPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
 
 
 function mapStateToProps(state) {
@@ -84,4 +83,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 
-export default connect(null, mapDispatchToProps)(ContactPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ContactPage);
