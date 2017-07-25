@@ -99,11 +99,13 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
             onRequestChange={(open) => this.setState({ open })}
             containerStyle={style.bg}
           >
+            <div style={{ paddingTop: '25%' }}>
             {items.map((item, idx) => {
               return (
-                <MenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)} style={{ color: '#F5F5F5', backgroundColor: '#000000' }}>{item.name}</MenuItem>
+                <MenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)} style={{ color: '#F5F5F5', backgroundColor: '#000000', textTransform: 'uppercase', letterSpacing: '2px', padding: '2%' }}>{item.name}</MenuItem>
               );
             })}
+            </div>
           </Drawer>
         </div>
       </div>
