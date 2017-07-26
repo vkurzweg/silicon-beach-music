@@ -22,7 +22,7 @@ const StyledAppBar = styled(AppBar)`
 const A = styled.a`
   font-family: 'Poiret One';
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   margin-top: 1%;
   padding-top: 1%;
