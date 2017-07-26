@@ -106,7 +106,7 @@ const CtaBtn = styled.button`
   font-size: 20px;
   display: block;
   margin: 0 auto;
-  width: 66%;
+  width: 15em;
   border-radius: 2px;
   margin: 5% auto;
   &:hover, &:focus, &:active:hover, &:active:focus, &:active:visited {

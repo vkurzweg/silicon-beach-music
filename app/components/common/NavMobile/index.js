@@ -77,7 +77,7 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
   }
 
   render() {
-    const brand = <A href="/" style={{ textDecoration: 'none' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '35px', height: '35px', marginTop: '-4%' }} />Silicon Beach Guitar Lessons</A>;
+    const brand = <A href="/" style={{ textDecoration: 'none', marginLeft: '-2%' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '35px', height: '35px', marginTop: '-4%' }} />Silicon Beach Guitar Lessons</A>;
 
     return (
       <div>
