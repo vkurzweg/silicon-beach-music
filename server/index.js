@@ -57,7 +57,7 @@ function handleSendMail(req, res){
 
   sendmail({
       from: req.body.contactEmail,
-      to: 'victoriakdunham@gmail.com',
+      to: 'aliamemarian@gmail.com',
       subject: 'Silicon Beach Guitar Lessons',
       html: '<p>name: ' + req.body.contactName +'</p>' + '<p>email: ' + req.body.contactEmail + '</p>' + '<p>number: ' + req.body.contactPhone +'</p>' + '<p>message: ' + req.body.contactMessage + '</p>'
     }, function(err, reply) {

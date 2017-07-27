@@ -34,6 +34,19 @@ const A = styled.a`
   }
 `;
 
+const StyledMenuItem = styled(MenuItem)`
+  color: #F5F5F5;
+  background-color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2%;
+  color: #F5F5F5;
+
+  &:hover {
+    color: #24A5DA;
+  }
+`;
+
 const items = [
   {
     name: 'Rates',
@@ -102,7 +115,7 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
             <div style={{ paddingTop: '25%' }}>
             {items.map((item, idx) => {
               return (
-                <MenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)} style={{ color: '#F5F5F5', backgroundColor: '#000000', textTransform: 'uppercase', letterSpacing: '2px', padding: '2%' }}>{item.name}</MenuItem>
+                <StyledMenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)} style={{ color: '#F5F5F5', backgroundColor: '#000000', textTransform: 'uppercase', letterSpacing: '2px', padding: '2%' }}>{item.name}</StyledMenuItem>
               );
             })}
             </div>
