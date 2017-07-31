@@ -38,8 +38,8 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           <IntroMobile />
         </MediaQuery>
         <WW />
-        <Social />
         <Bio />
+        <Social />
         <Footer />
       </div>
     );

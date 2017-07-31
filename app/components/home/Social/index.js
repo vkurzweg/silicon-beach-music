@@ -12,7 +12,7 @@ import { Image } from 'cloudinary-react';
 
 function Social() {
   return (
-    <div>
+    <div className="container" style={{ background: '#000000', width: '100%' }}>
     </div>
   );
 }

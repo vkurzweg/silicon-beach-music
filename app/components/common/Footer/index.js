@@ -6,6 +6,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { Image } from 'cloudinary-react';
+
 
 const Background = styled.div`
   background-color: #000000;
@@ -40,6 +42,14 @@ const Link = styled.a`
 function Footer() {
   return (
     <Background>
+      <p style={{ textAlign: 'center' }}>
+        <a href="https://www.instagram.com/siliconbeachguitar" target="blank"><Image cloudName="kurzweg" publicId="instagram-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
+        <a href="https://www.facebook.com/siliconbeachguitar" target="blank"><Image cloudName="kurzweg" publicId="facebook-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
+        <a href="https://twitter.com/SiliconBeachGTR" target="blank"><Image cloudName="kurzweg" publicId="twitter-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
+        <a href="" target="blank"><Image cloudName="kurzweg" publicId="yelp-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
+        <a href="" target="blank"><Image cloudName="kurzweg" publicId="tripadvisor-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
+      </p>
+
       <p style={{ marginBottom: '0' }}>Copyright SBGL 2017 &nbsp;<img style={{ width: '40px', height: '40px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1497936951/guitartree_blue.png" alt="silicon beach guitar lessons logo" />&nbsp; Website by <Link href="http://www.v-k.la/" target="blank">VK/LA</Link></p>
     </Background>
   );
