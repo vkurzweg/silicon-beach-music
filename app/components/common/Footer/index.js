@@ -49,8 +49,7 @@ function Footer() {
         <a href="" target="blank"><Image cloudName="kurzweg" publicId="yelp-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
         <a href="" target="blank"><Image cloudName="kurzweg" publicId="tripadvisor-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
       </p>
-
-      <p style={{ marginBottom: '0' }}>Copyright SBGL 2017 &nbsp;<img style={{ width: '40px', height: '40px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1497936951/guitartree_blue.png" alt="silicon beach guitar lessons logo" />&nbsp; Website by <Link href="http://www.v-k.la/" target="blank">VK/LA</Link></p>
+      <p style={{ marginBottom: '0' }}>Copyright SBGL 2017 &nbsp;<img style={{ width: '40px', height: '40px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1497936951/guitartree_blue.png" alt="silicon beach guitar lessons logo" />&nbsp; Website by <Link href="http://www.vk.digital" target="blank">vk.digital</Link></p>
     </Background>
   );
 }
