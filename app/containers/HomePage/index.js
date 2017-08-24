@@ -19,6 +19,7 @@ import IntroMobile from 'components/home/IntroMobile';
 import WW from 'components/home/Ww';
 import Social from 'components/home/Social';
 import Bio from 'components/home/Bio';
+import Logos from 'components/home/Logos';
 import Footer from 'components/common/Footer';
 import MediaQuery from 'react-responsive';
 
@@ -37,6 +38,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
           <HeroMobile />
           <IntroMobile />
         </MediaQuery>
+        <Logos />
         <WW />
         <Bio />
         <Social />
