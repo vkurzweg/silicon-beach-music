@@ -10,6 +10,7 @@
  */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 import Nav from 'components/common/Nav';
 import NavMobile from 'components/common/NavMobile';
 import Hero from 'components/home/Hero';
@@ -28,6 +29,12 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
   render() {
     return (
       <div>
+        <Helmet
+          title="HomePage"
+          meta={[
+            { name: 'Silicon Beach Guitar Lessons', content: 'Guitar, ukelele, music production and theory lessons in Los Angeles. Professional instruction by musicians and composers working in television and entertainment.' },
+          ]}
+        />
         <MediaQuery minWidth={768}>
           <Nav />
           <Hero />
